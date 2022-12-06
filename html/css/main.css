@@ -1,0 +1,135 @@
+body {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.logo>p {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: Bold Italic;
+  font-size: 48px;
+  text-align: left;
+}
+
+.logo>img {
+  width: 300px;
+  height: 300px;
+}
+
+.content {
+  height: 904px;
+  background: rgba(38, 92, 50, 1);
+  margin-left: 45px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.logowanie {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+  padding: 21px 42px;
+  gap: 30px;
+}
+
+.logowanie>p {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 40px;
+  text-align: left;
+}
+
+.login_panel {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 42px;
+  gap: 30px;
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.login_panel>p {
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: left;
+}
+
+.v9_65 {
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.text_input_wrapper {
+  display: block;
+}
+
+.text_input_wrapper>p {
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: left;
+}
+
+.text_input {
+  padding: 25px 25px;
+  border: 2px solid #265C32;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text_input>input {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: left;
+  overflow: scroll;
+  outline: none;
+}
+
+.text_input > p {
+  font-family: Inter;
+  font-weight: normal;
+  text-align: left;
+}
+
+.button {
+  padding: 25px 25px;
+  border: 2px solid #265C32;
+  border-radius: 4px;
+  transition: 0.3s;
+  background-color: #FFFFFF;
+  color:#265C32;
+  font-size: large;
+}
+
+.button:hover {
+  background-color: #265c3249;
+}
+
+a {
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: left;
+  color:rgba(38, 92, 50, 1);
+}
