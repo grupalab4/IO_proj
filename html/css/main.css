@@ -3,25 +3,6 @@ body {
   margin: 0px;
 }
 
-.logo {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.logo>p {
-  color: rgba(255, 255, 255, 1);
-  font-family: Inter;
-  font-weight: Bold Italic;
-  font-size: 48px;
-  text-align: left;
-}
-
-.logo>img {
-  width: 300px;
-  height: 300px;
-}
-
 .content {
   height: 904px;
   background: rgba(38, 92, 50, 1);
@@ -41,36 +22,12 @@ body {
   gap: 30px;
 }
 
-.logowanie>p {
+.side_panel>p {
   color: rgba(255, 255, 255, 1);
   font-family: Inter;
   font-weight: normal;
   font-size: 40px;
   text-align: left;
-}
-
-.login_panel {
-  width: 400px;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 21px 42px;
-  gap: 30px;
-  background: rgba(255, 255, 255, 1);
-  overflow: hidden;
-}
-
-.login_panel>p {
-  font-family: Inter;
-  font-weight: normal;
-  font-size: 24px;
-  text-align: left;
-}
-
-.v9_65 {
-  background: rgba(255, 255, 255, 1);
-  overflow: hidden;
 }
 
 .text_input_wrapper {
