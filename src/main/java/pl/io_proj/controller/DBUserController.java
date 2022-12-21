@@ -10,8 +10,12 @@ import pl.io_proj.service.DBUserService;
 @RequestMapping(path = "api/users")
 public class DBUserController {
 
-    @Autowired
     private DBUserService service;
+
+    @Autowired
+    public void setService(DBUserService service) {
+        this.service = service;
+    }
 
     @GetMapping("/register")
     public String register(String username, String password, String firstName, String surname, Integer age, Integer height, Integer weight) throws JsonProcessingException {

@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface DBUserRepository extends JpaRepository<DBUser, Long> {
-    DBUser findDBUserByUsername(String username);
+    DBUser getDBUserByUsername(String username);
     boolean existsDBUserByUsername(String username);
 }

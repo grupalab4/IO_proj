@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.io_proj.service.DBUserService;
 
 @RestController
+@RequestMapping(path = "api")
 public class WebAppController {
 
     private DBUserService service;

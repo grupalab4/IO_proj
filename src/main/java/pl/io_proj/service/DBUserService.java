@@ -1,32 +1,14 @@
 package pl.io_proj.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Service;
-import pl.io_proj.config.IOAuthenticationProvider;
 import pl.io_proj.model.DBUser;
 import pl.io_proj.repository.DBUserRepository;
 import pl.io_proj.responses.RegisterResponse;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class DBUserService {
@@ -61,8 +43,8 @@ public class DBUserService {
         return repository.existsDBUserByUsername(username);
     }
 
-    public DBUser findDBUserByUsername(String username) {
-        return repository.findDBUserByUsername(username);
+    public DBUser getDBUserByUsername(String username) {
+        return repository.getDBUserByUsername(username);
     }
 
     public String register(String username, String password, String firstName, String surname, Integer age, Integer height, Integer weight) throws JsonProcessingException {

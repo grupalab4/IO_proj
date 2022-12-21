@@ -32,7 +32,6 @@ import pl.io_proj.service.DBUserService;
 @EnableAutoConfiguration(exclude = SecurityAutoConfiguration.class)
 public class SecurityConfig {
 
-
     private IOAuthenticationProvider authenticationProvider;
 
     @Autowired
@@ -68,7 +67,7 @@ public class SecurityConfig {
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .failureUrl("/login.html?error")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/index.html")
                 .permitAll()
                 .and()
                 .logout()
