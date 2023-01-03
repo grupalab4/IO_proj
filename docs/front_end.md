@@ -1,13 +1,13 @@
 Chciałbym, aby podstrony były przygotowane w następujący sposób:
-- `html/nazwa` podstrona
+- `src/main/resources/static/nazwa` podstrona
   - `index.html` kod html podstrony
   - `nazwa.js` skrypty
-- `html/css/nazwa.css`  style
+- `src/main/resources/static/css/nazwa.css`  style
 
-skrypty dodajemy na końcu `<body>`, przy pomocy: `<script src='../js/tools.js'></script>`
+skrypty dodajemy na końcu `<body>`, przy pomocy: `<script src='/js/tools.js'></script>`
 jeżeli jesteście sami pisać skrypty JavaScript, to będzie to bardzo pomocne, jeśli jednak potrzebna będzie pomoc to proście o pomoc na kanale [#fe](https://discord.com/channels/1031948492635119746/1045725601434193960) lub prywatnie Kukininja#7162.
 
-style dodajemy w nagłówku `<head>` przy pomocy: `<link href="../css/main.css" rel="stylesheet" />` (jak będzie przygotowany serwer do serwowania strony, to odpowiednio zmienimy linki),
+style dodajemy w nagłówku `<head>` przy pomocy: `<link href="/css/main.css" rel="stylesheet" />` (jak będzie przygotowany serwer do serwowania strony, to odpowiednio zmienimy linki),
 nie piszemy stylów w formacie `inline` czyli:
 ```html
 <div style='display: flex'> nic </div> <!-- dont do that! -->
