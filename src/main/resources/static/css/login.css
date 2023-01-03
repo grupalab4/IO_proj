@@ -1,0 +1,18 @@
+.login_panel {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 21px 42px;
+    gap: 30px;
+    background: rgba(255, 255, 255, 1);
+    overflow: hidden;
+}
+
+.login_panel>p {
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: left;
+}
