@@ -25,8 +25,11 @@ public class IOAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        if(!service.existsDBUserByUsername(authentication.getName())) throw new BadCredentialsException("User not found in DB!");
-        if(!BCrypt.checkpw(authentication.getCredentials().toString(), service.getDBUserByUsername(authentication.getName()).getPassword())) throw new BadCredentialsException("Wrong password for user " + authentication.getCredentials());
+
+        if (!service.existsDBUserByUsername(authentication.getName()))
+            throw new BadCredentialsException("User not found in DB!");
+        if (!BCrypt.checkpw(authentication.getCredentials().toString(), service.getDBUserByUsername(authentication.getName()).getPassword()))
+            throw new BadCredentialsException("Wrong password for user " + authentication.getCredentials());
 
         return new UsernamePasswordAuthenticationToken(authentication.getName(), authentication.getCredentials().toString(), new ArrayList<>());
     }
