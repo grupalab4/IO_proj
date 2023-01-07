@@ -49,7 +49,8 @@ header {
 
 .calculator {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background: #265C32;
     height: 100%;
     margin-bottom: 4em;
@@ -83,7 +84,7 @@ main {
 }
 
 .future {
-    height: 100%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,14 +92,12 @@ main {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     /*border-radius: 20px;*/
     align-items: center;
-    width: 30%;
+    padding: 20px;
+    margin: 30px;
 }
 
 .input-info {
-    display: flex;
-    justify-content: center;
     margin-bottom: 0.5em;
-    gap: 1em;
 }
 
 .button-save {
@@ -123,17 +122,16 @@ button:hover {
 }
 
 .balance {
-    height: 20%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     /*border-radius: 20px;*/
-    align-self: center;
     text-align: center;
     justify-content: center;
-    margin: 2em;
-    width: 30%;
+    margin: 30px;
+    padding: 20px;
     font-weight: bold;
 }
 
