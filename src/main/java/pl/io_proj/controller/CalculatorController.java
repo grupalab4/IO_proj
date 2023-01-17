@@ -1,5 +1,6 @@
 package pl.io_proj.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,13 +14,10 @@ import pl.io_proj.service.ProductService;
 import java.time.LocalDate;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("api/calculator")
 public class CalculatorController {
-    private CalculatorService calculatorService;
-    @Autowired
-    public void setService(CalculatorService service) {
-        this.calculatorService = service;
-    }
+    private final CalculatorService calculatorService;
 
     @GetMapping
     public ResponseEntity<Integer> getDailyCalorieIntake(@RequestParam double goalWeight, @RequestParam LocalDate deadline) {

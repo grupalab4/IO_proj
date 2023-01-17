@@ -1,5 +1,6 @@
 package pl.io_proj.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.io_proj.model.DBUser;
@@ -8,22 +9,12 @@ import pl.io_proj.repository.DBUserRepository;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+@RequiredArgsConstructor
 @Service
 public class CalculatorService {
-    private DBUserRepository userRepository;
-    private AuthenticatedUserFacade authenticatedUserFacade;
+    private final AuthenticatedUserFacade authenticatedUserFacade;
     private final double AVERAGE_PAL = 1.55; // indywidualny wskaźnik aktywności fizycznej
     private final int CALORIES_PER_KG = 7700;
-
-
-    @Autowired
-    public void setRepository(DBUserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-    @Autowired
-    public void setAuthorizedUserFacade (AuthenticatedUserFacade authenticatedUserFacade) {
-        this.authenticatedUserFacade = authenticatedUserFacade;
-    }
 
     public Integer getDailyCalorieIntake(double goalWeight, LocalDate deadline) {
         if (deadline.isBefore(LocalDate.now())) {
