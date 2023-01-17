@@ -19,9 +19,9 @@ public class ProductController {
         this.service = service;
     }
 
-    @GetMapping("/test")
-    public String test(HttpServletRequest request) {
-        return service.test(request);
+    @GetMapping("/add_product")
+    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) {
+        return service.addProduct(name, description, composition, calorificValuePer100G);
     }
 
     @GetMapping("/get-product-name")
