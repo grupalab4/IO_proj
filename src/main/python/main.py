@@ -20,9 +20,8 @@ connection = psycopg2.connect(host = host,
 
 
 cur = connection.cursor()
-#cur.execute("CREATE TABLE test (id serial PRIMARY KEY, num integer, data varchar);")
+cur.execute("SET search_path TO liczymy_kalorie")
 
-#read file and import it as datasheet
 ws = Worksheet()
 csv_file = open(path, "r")
 
