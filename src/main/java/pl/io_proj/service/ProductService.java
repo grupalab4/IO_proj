@@ -1,11 +1,10 @@
 package pl.io_proj.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import pl.io_proj.model.DBUser;
+
 import pl.io_proj.model.Product;
 import pl.io_proj.repository.ProductRepository;
 import pl.io_proj.responses.RegisterResponse;
@@ -42,6 +41,15 @@ public class ProductService {
 
         addProduct(new Product(name, description, composition, calorificValuePer100G));
         return "Produkt "+name+" dodano";
+    }
+
+    public Product getProductByName(String name) throws Exception {
+
+        if (name == null || name.isEmpty())
+            throw new Exception("Product name is empty");
+
+        return repository.findByName(name)
+                .orElseThrow(() -> new Exception("Product not found"));
     }
 }
 
