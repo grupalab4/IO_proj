@@ -1,6 +1,6 @@
 package pl.io_proj.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ public class ProductController {
     }
 
     @GetMapping("/add_product")
-    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) {
+    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) throws JsonProcessingException {
         return service.addProduct(name, description, composition, calorificValuePer100G);
     }
 

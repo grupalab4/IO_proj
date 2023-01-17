@@ -1,10 +1,12 @@
 package pl.io_proj;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import pl.io_proj.model.DBUser;
+import pl.io_proj.model.Product;
 import pl.io_proj.repository.DBUserRepository;
 import pl.io_proj.repository.ProductRepository;
 import pl.io_proj.repository.RecipeRepository;
@@ -39,8 +41,6 @@ public class IoProjApplication {
 		DBUserService s = context.getBean(DBUserService.class);
 		//s.addDBUser(new DBUser("user1", "pass1", "a", "a", 1, 1, 1));
 		// s.addDBUser(new DBUser("admin", "admin", "a", "a", 100, 177, 20));
-
-		ProductService prodS = context.getBean(ProductService.class);
 
 		Scanner input = new Scanner(System.in);
 		input.nextLine();
