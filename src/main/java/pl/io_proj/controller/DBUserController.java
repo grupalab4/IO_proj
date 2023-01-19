@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.io_proj.dto.UserDTO;
 import pl.io_proj.model.DBUser;
 import pl.io_proj.model.Product;
 import pl.io_proj.service.DBUserService;
@@ -32,8 +33,9 @@ public class DBUserController {
 
         try {
             DBUser user = service.getCurrentDBUser();
+            UserDTO userDto = new UserDTO(user);
 
-            return new ResponseEntity<>(user, HttpStatus.OK);
+            return new ResponseEntity<>(userDto, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
