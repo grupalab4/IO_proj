@@ -1,17 +1,21 @@
 package pl.io_proj.dto;
 
 import jakarta.annotation.Nullable;
+import lombok.Getter;
 import pl.io_proj.model.DBUser;
 
-public class UserDTO {
-    private String firstName;
-    private String surname;
+import java.io.Serializable;
+
+@Getter
+public class UserDTO implements Serializable {
+    private final String firstName;
+    private final String surname;
     @Nullable
-    private Integer weight;
+    private final Integer weight;
     @Nullable
-    private Integer height;
+    private final Integer height;
     @Nullable
-    private Integer age;
+    private final Integer age;
 
     public UserDTO(DBUser user){
         this.firstName = user.getFirstName();
