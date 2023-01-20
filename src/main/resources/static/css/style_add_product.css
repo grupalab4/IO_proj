@@ -26,11 +26,6 @@ input {
     margin: 0 1rem;
 }
 
-.search .name{
-    width:55%;
-}
-
-
 .input-box {
     height: 150px;
     display: flex;
@@ -66,15 +61,6 @@ input {
     padding: 0 1rem 1rem 1rem;
     color: white;
     font-weight: bold;
-}
-
-.input-info {
-    margin-bottom: 0.5em;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
 }
 
 input::-webkit-outer-spin-button,

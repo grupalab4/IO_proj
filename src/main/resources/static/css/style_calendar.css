@@ -36,20 +36,20 @@ input::-webkit-inner-spin-button {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.wrapper .current-date {
+.wrapper>.current-date {
     font-size: 1.45rem;
     font-weight: 500;
     padding: 0 1rem;
 }
 
-.wrapper .icons span{
+.wrapper>.icons>span{
     cursor: pointer;
     transition: 0.3s;
     border-radius: 50%;
     padding: 0.8rem;
 }
 
-.wrapper .icons span:hover{
+.wrapper>.icons>span:hover{
     background-color: #c9c6c6;
 }
 

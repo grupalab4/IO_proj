@@ -47,20 +47,10 @@
     align-items: flex-end;
 }
 
-a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.input-search-item {
-    padding: 0.5rem;
-    border: solid black 1px;
 }
 
 .item-list {
