@@ -136,6 +136,15 @@ header>.spacing {
     justify-content: space-between;
 }
 
+.text_input[type=number] {
+    padding: 15px 15px 15px 20px;
+    border: 2px solid #265C32;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .text_input>input {
     border: 0;
     margin: 0;

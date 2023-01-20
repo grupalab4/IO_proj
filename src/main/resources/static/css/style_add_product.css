@@ -26,10 +26,6 @@ input {
     margin: 0 1rem;
 }
 
-.weight, .kcal {
-    width: 30px;
-}
-
 .search .name{
     width:55%;
 }
@@ -37,7 +33,6 @@ input {
 
 .input-box {
     height: 150px;
-    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +46,6 @@ input {
 }
 
 .product-list {
-    height: 370px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
