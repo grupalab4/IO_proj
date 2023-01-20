@@ -19,35 +19,3 @@
     color: white;
     font-weight: bold;
 }
-
-.buttons {
-    background: none;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
-.buttons>button {
-    margin: 20px;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: white;
-    background: #265C32;
-    font-size: 25px;
-    border: none;
-    border-radius: 4px;
-    min-width: 150px;
-    transition: 0.3s;
-}
-
-button:hover {
-    cursor: pointer;
-    background: #044B14;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
-}
