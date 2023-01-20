@@ -8,18 +8,6 @@
     justify-content: center;
 }
 
-.input-info {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.5em;
-    gap: 1em;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -27,11 +15,10 @@ input::-webkit-inner-spin-button {
 }
 
 .calendar {
-    margin: 0;
+    margin: 3vw;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
     display: flex;
     align-items: center;
     justify-content: center;

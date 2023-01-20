@@ -5,6 +5,7 @@
     justify-content: space-around;
     background: #265C32;
     height: 100%;
+    padding: 15px;
     margin-bottom: 4em;
 }
 
@@ -28,6 +29,7 @@
     align-items: center;
     padding: 20px;
     margin: 30px;
+    gap: 1vw;
 }
 
 .input-info {
@@ -50,11 +52,6 @@
 
 .balance > p {
     margin: 0.5em auto;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
 }
 
 input::-webkit-outer-spin-button,

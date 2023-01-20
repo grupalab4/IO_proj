@@ -1,3 +1,7 @@
+::selection {
+    background: #7ba985;
+}
+
 body {
     font-size: 14px;
     font-family: Inter;
@@ -40,7 +44,7 @@ header>.frame {
     padding: 15px;
     margin: 15px;
     border: 3px solid white;
-    border-radius: 4px;;
+    border-radius: 4px;
     transition: 0.3s;
 }
 
@@ -169,4 +173,9 @@ header>.spacing {
 
 .wide-button {
     padding: 15px 30px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
 }
