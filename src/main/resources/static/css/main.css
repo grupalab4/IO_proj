@@ -40,6 +40,12 @@ header>.frame {
     padding: 15px;
     margin: 15px;
     border: 3px solid white;
+    border-radius: 4px;;
+    transition: 0.3s;
+}
+
+header>a:hover {
+    background-color: #bfdac5;
 }
 
 header>.spacing {
@@ -117,7 +123,7 @@ header>.spacing {
 }
 
 .text_input {
-    padding: 25px 25px;
+    padding: 15px 25px;
     border: 2px solid #265C32;
     border-radius: 4px;
     display: flex;
@@ -133,6 +139,7 @@ header>.spacing {
     text-align: left;
     overflow: scroll;
     outline: none;
+    width: 100%;
 }
 
 .text_input>p {
@@ -148,8 +155,18 @@ header>.spacing {
     background-color: #FFFFFF;
     color: #265C32;
     font-size: large;
+    align-self: center;
 }
 
 .button:hover {
-    background-color: #265c3249;
+    background-color: #bfdac5;
+    cursor: pointer;
+}
+
+.small-button {
+    padding: 10px 10px;
+}
+
+.wide-button {
+    padding: 15px 30px;
 }

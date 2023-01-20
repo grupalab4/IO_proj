@@ -47,38 +47,6 @@
     align-items: flex-end;
 }
 
-.button-save {
-    background: white;
-    width: 50%;
-    border: none;
-    color: black;
-    margin: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: left;
-    padding-left: 2em;
-    font-weight: bold;
-}
-
-.button-add {
-    background: #265C32;
-    border: none;
-    color: white;
-    margin-top: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: center;
-    font-weight: bold;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button-save:hover {
-    background: #044B14;
-}
-
 a {
     text-decoration: inherit;
     color: inherit;

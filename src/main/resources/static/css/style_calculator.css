@@ -34,27 +34,6 @@
     margin-bottom: 0.5em;
 }
 
-.button-save {
-    background: #265C32;
-    width: 50%;
-    border: none;
-    color: white;
-    margin: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: left;
-    padding-left: 2em;
-    font-weight: bold;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button-save:hover {
-    background: #044B14;
-}
-
 .balance {
     height: 200px;
     display: flex;

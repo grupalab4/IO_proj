@@ -37,7 +37,9 @@
     background: #265C32;
     font-size: 25px;
     border: none;
+    border-radius: 4px;
     min-width: 150px;
+    transition: 0.3s;
 }
 
 button:hover {
