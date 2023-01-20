@@ -21,6 +21,7 @@
 .future {
     height: 200px;
     display: flex;
+    font-size: large;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -33,11 +34,14 @@
 }
 
 .input-info {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
     margin-bottom: 0.5em;
 }
 
 .balance {
-    height: 200px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -58,4 +62,15 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.left {
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.right {
+    flex: 2;
+    justify-content: center;
 }
