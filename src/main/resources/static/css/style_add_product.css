@@ -87,24 +87,6 @@ input {
     font-weight: bold;
 }
 
-main {
-    display: flex;
-    width: 95%;
-    flex-direction: column;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.frame {
-    display: flex;
-    border: 3px solid white;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-}
-
 .input-info {
     margin-bottom: 0.5em;
 }
