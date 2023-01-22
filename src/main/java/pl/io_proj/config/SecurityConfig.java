@@ -60,7 +60,7 @@ public class SecurityConfig {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/css/*", "/images/*", "/js/*", "/register.html", "/api/").permitAll()
+                .requestMatchers("/css/*", "/images/*", "/js/*", "/register.html", "/api/users/register").permitAll()
                 .requestMatchers("/api/*", "/*").authenticated()
                 .and()
                 .formLogin()

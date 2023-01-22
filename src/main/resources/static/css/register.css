@@ -1,0 +1,24 @@
+.register_panel{
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 21px 42px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 1);
+    overflow-y: scroll;
+}
+.register_panel>p{
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: left;
+    width: calc(50% - 10px);
+}
+
+a{
+    font-size: 24px;
+    text-align: left;
+    color: rgba(38, 92, 50, 1);
+}

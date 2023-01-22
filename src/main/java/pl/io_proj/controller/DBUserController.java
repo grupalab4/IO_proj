@@ -17,8 +17,9 @@ public class DBUserController {
         this.service = service;
     }
 
-    @GetMapping("/register")
-    public String register(String username, String password, String firstName, String surname, Integer age, Integer height, Integer weight) throws JsonProcessingException {
+    @GetMapping(path = "/register", produces = "application/json")
+    public String register(String username, String password, String firstName, String surname, Integer age,
+            Integer height, Integer weight) throws JsonProcessingException {
         return service.register(username, password, firstName, surname, age, height, weight);
     }
 }

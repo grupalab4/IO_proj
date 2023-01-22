@@ -100,7 +100,6 @@ header>.spacing {
 
 .content {
     background: rgba(38, 92, 50, 1);
-    margin-left: 45px;
     margin-top: 45px;
     margin-bottom: 45px;
     display: flex;
@@ -131,14 +130,12 @@ header>.spacing {
 .side_panel {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     align-items: flex-start;
-    padding: 21px 42px;
-    gap: 30px;
 }
 
 .side_panel>p {
     color: rgba(255, 255, 255, 1);
+    margin-top: 0;
     font-size: 40px;
     text-align: left;
 }
