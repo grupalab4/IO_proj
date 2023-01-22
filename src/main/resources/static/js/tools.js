@@ -16,3 +16,17 @@ async function postData(url = '', data = {}) {
     });
     return response.json(); // parses JSON response into native JavaScript objects
 }
+
+async function getFormData(url = '', data) {
+    // Default options are marked with *
+    
+    let urlencoded = (new URLSearchParams(data)).toString();
+    const response = await fetch(url + "?" + urlencoded, {
+    //    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    //    mode: 'cors', // no-cors, *cors, same-origin
+    //    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    //    credentials: 'same-origin', // include, *same-origin, omit
+    //    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+}
