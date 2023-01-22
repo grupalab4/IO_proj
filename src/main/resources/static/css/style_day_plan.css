@@ -7,26 +7,7 @@
     margin-bottom: 4em;
 }
 
-main {
-    display: flex;
-    width: 95%;
-    flex-direction: column;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.frame {
-    display: flex;
-    border: 3px solid white;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-}
-
 .add-item{
-    height: 150px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -37,6 +18,7 @@ main {
     margin: 30px;
     padding: 20px;
     font-weight: bold;
+    gap: 10px;
 }
 
 .add-item p {
@@ -44,7 +26,6 @@ main {
 }
 
 .calories {
-    height: 50px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -66,56 +47,10 @@ main {
     align-items: flex-end;
 }
 
-.button-save {
-    background: white;
-    width: 50%;
-    border: none;
-    color: black;
-    margin: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: left;
-    padding-left: 2em;
-    font-weight: bold;
-}
-
-.button-add {
-    background: #265C32;
-    border: none;
-    color: white;
-    margin-top: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: center;
-    font-weight: bold;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button-save:hover {
-    background: #044B14;
-}
-
-.button-add:hover {
-    background: #044B14;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.input-search-item {
-    padding: 0.5rem;
-    border: solid black 1px;
 }
 
 .item-list {

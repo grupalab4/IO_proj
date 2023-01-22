@@ -26,18 +26,8 @@ input {
     margin: 0 1rem;
 }
 
-.weight, .kcal {
-    width: 30px;
-}
-
-.search .name{
-    width:55%;
-}
-
-
-.add{
+.input-box {
     height: 150px;
-    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,24 +37,10 @@ input {
     align-items: center;
     padding: 20px;
     margin: 30px;
-}
-
-.search {
-    height: 150px;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    /*border-radius: 20px;*/
-    align-items: center;
-    padding: 20px;
-    margin: 30px;
+    gap: 20px;
 }
 
 .product-list {
-    height: 370px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,54 +61,6 @@ input {
     padding: 0 1rem 1rem 1rem;
     color: white;
     font-weight: bold;
-}
-
-main {
-    display: flex;
-    width: 95%;
-    flex-direction: column;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.frame {
-    display: flex;
-    border: 3px solid white;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-}
-
-.input-info {
-    margin-bottom: 0.5em;
-}
-
-.button-form {
-    background: #265C32;
-    width: 58%;
-    border: none;
-    color: white;
-    margin: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: left;
-    padding-left: 2em;
-    font-weight: bold;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button-form:hover {
-    background: #044B14;
-}
-
-a {
-    text-decoration: inherit;
-    color: inherit;
 }
 
 input::-webkit-outer-spin-button,

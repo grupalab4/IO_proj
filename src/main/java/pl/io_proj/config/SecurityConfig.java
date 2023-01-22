@@ -38,6 +38,7 @@ public class SecurityConfig {
     public void setAuthenticationProvider(@Lazy IOAuthenticationProvider authenticationProvider) {
         this.authenticationProvider = authenticationProvider;
     }
+
     private PasswordEncoder encoder = new BCryptPasswordEncoder();
 
     @Bean
@@ -47,8 +48,8 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationManager authManager(HttpSecurity http) throws Exception {
-        AuthenticationManagerBuilder authenticationManagerBuilder =
-                http.getSharedObject(AuthenticationManagerBuilder.class);
+        AuthenticationManagerBuilder authenticationManagerBuilder = http
+                .getSharedObject(AuthenticationManagerBuilder.class);
         authenticationManagerBuilder.authenticationProvider(authenticationProvider);
         return authenticationManagerBuilder.build();
     }
@@ -59,15 +60,16 @@ public class SecurityConfig {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeHttpRequests()
-                .anyRequest().permitAll()
+                .requestMatchers("/css/*", "/images/*", "/js/*", "/register.html", "/api/").permitAll()
+                .requestMatchers("/api/*", "/*").authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login/index.html")
+                .loginPage("/login.html")
                 .loginProcessingUrl("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .failureUrl("/login/index.html?error")
-                .defaultSuccessUrl("/index.html")
+                .failureUrl("/login.html?error")
+                .defaultSuccessUrl("/home.html", true)
                 .permitAll()
                 .and()
                 .logout()
@@ -77,8 +79,7 @@ public class SecurityConfig {
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
-                .maximumSessions(10)
-        ;
+                .maximumSessions(10);
 
         return http.build();
     }

@@ -5,39 +5,14 @@
     justify-content: space-around;
     background: #265C32;
     height: 100%;
+    padding: 15px;
     margin-bottom: 4em;
-}
-
-main {
-    display: flex;
-    width: 95%;
-    flex-direction: column;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.frame {
-    display: flex;
-    border: 3px solid white;
-    width: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-}
-
-.plans-future {
-    height: 30%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-weight: bold;
 }
 
 .future {
     height: 200px;
     display: flex;
+    font-size: large;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -46,35 +21,18 @@ main {
     align-items: center;
     padding: 20px;
     margin: 30px;
+    gap: 1vw;
 }
 
 .input-info {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
     margin-bottom: 0.5em;
 }
 
-.button-save {
-    background: #265C32;
-    width: 50%;
-    border: none;
-    color: white;
-    margin: 0.5em;
-    line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    text-align: left;
-    padding-left: 2em;
-    font-weight: bold;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button-save:hover {
-    background: #044B14;
-}
-
 .balance {
-    height: 200px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -91,13 +49,19 @@ button:hover {
     margin: 0.5em auto;
 }
 
-a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.left {
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.right {
+    flex: 2;
+    justify-content: center;
 }

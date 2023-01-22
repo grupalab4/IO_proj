@@ -1,3 +1,7 @@
+::selection {
+    background: #7ba985;
+}
+
 body {
     font-size: 14px;
     font-family: Inter;
@@ -28,6 +32,7 @@ header {
     background: #265C32;
     flex-direction: row;
     margin: 50px;
+    margin-bottom: 20px;
     justify-content: space-between;
     align-items: center;
     color: white;
@@ -40,11 +45,44 @@ header>.frame {
     padding: 15px;
     margin: 15px;
     border: 3px solid white;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+header>a:hover {
+    background-color: #bfdac5;
 }
 
 header>.spacing {
     display: flex;
     flex: 1;
+}
+
+.buttons {
+    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.buttons>a {
+    margin: 10px;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background: #265C32;
+    font-size: 25px;
+    border: none;
+    border-radius: 4px;
+    min-width: 150px;
+    transition: 0.3s;
+}
+
+.buttons>a:hover {
+    cursor: pointer;
+    background: #044B14;
 }
 
 .logo-container {
@@ -109,6 +147,7 @@ header>.spacing {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .text_input_wrapper>p {
@@ -117,7 +156,16 @@ header>.spacing {
 }
 
 .text_input {
-    padding: 25px 25px;
+    padding: 15px 25px;
+    border: 2px solid #265C32;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_input[type=number] {
+    padding: 15px 15px 15px 20px;
     border: 2px solid #265C32;
     border-radius: 4px;
     display: flex;
@@ -133,11 +181,25 @@ header>.spacing {
     text-align: left;
     overflow: scroll;
     outline: none;
+    width: 100%;
+}
+
+.text_input_small {
+    padding: 5px 15px;
+}
+.text_input_small > input {
+    font-size: normal;
 }
 
 .text_input>p {
     text-align: left;
     float: right;
+    margin:auto;
+}
+
+.border-none {
+    padding: 0;
+    border: none;
 }
 
 .button {
@@ -148,8 +210,23 @@ header>.spacing {
     background-color: #FFFFFF;
     color: #265C32;
     font-size: large;
+    align-self: center;
 }
 
 .button:hover {
-    background-color: #265c3249;
+    background-color: #bfdac5;
+    cursor: pointer;
+}
+
+.small-button {
+    padding: 10px 10px;
+}
+
+.wide-button {
+    padding: 15px 30px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
 }
