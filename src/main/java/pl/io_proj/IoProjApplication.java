@@ -40,6 +40,8 @@ public class IoProjApplication {
 		//s.addDBUser(new DBUser("user1", "pass1", "a", "a", 1, 1, 1));
 		// s.addDBUser(new DBUser("admin", "admin", "a", "a", 100, 177, 20));
 
+		ProductService prodS = context.getBean(ProductService.class);
+
 		Scanner input = new Scanner(System.in);
 		input.nextLine();
 	}

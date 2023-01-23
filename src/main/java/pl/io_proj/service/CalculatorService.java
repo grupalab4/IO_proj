@@ -13,15 +13,19 @@ import java.time.temporal.ChronoUnit;
 @RequiredArgsConstructor
 @Service
 public class CalculatorService {
-    private final AuthenticatedUserFacade authenticatedUserFacade;
-    private final double AVERAGE_PAL = 1.55; // indywidualny wskaźnik aktywności fizycznej
+    //private final AuthenticatedUserFacade authenticatedUserFacade;
+    private final DBUserService dbUserService;
+    private final double AVERAGE_PAL = 1.35; // indywidualny wskaźnik aktywności fizycznej
     private final int CALORIES_PER_KG = 7700;
 
-    public Integer getDailyCalorieIntake(double goalWeight, LocalDate deadline) {
+    public Integer getDailyCalorieIntake(double goalWeight, LocalDate deadline) throws Exception {
+        if (goalWeight < 0 || goalWeight > 999) {
+            throw new IllegalArgumentException("Invalid goal weight");
+        }
         if (deadline.isBefore(LocalDate.now())) {
             throw new IllegalArgumentException("Chosen date cannot be from the past");
         }
-        DBUser currentUser = authenticatedUserFacade.getCurrentUser(); // zalogowany user
+        DBUser currentUser = dbUserService.getCurrentDBUser(); // zalogowany user
         double currentWeight = currentUser.getWeight();
         double currentHeight = currentUser.getHeight();
 

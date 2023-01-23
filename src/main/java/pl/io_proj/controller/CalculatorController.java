@@ -23,7 +23,7 @@ public class CalculatorController {
 
     @GetMapping
     public ResponseEntity<Integer> getDailyCalorieIntake(@RequestParam double goalWeight,
-                                                         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate deadline) {
+                                                         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate deadline) throws Exception {
         Integer dailyCalorieIntake = this.calculatorService.getDailyCalorieIntake(goalWeight, deadline);
         return new ResponseEntity<>(dailyCalorieIntake, HttpStatus.OK);
     }
