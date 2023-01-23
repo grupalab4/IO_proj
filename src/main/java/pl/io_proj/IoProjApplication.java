@@ -36,6 +36,9 @@ public class IoProjApplication {
 //		System.out.println(prodS.addProduct("drzewo","bo tak","dupa",6));
 //		System.out.println(prodS.addProduct("rzodkiew",null,null,15));
 //		System.out.println(prodS.addProduct(null,null,null,15));
+		DBUserService s = context.getBean(DBUserService.class);
+		//s.addDBUser(new DBUser("user1", "pass1", "a", "a", 1, 1, 1));
+		// s.addDBUser(new DBUser("admin", "admin", "a", "a", 100, 177, 20));
 
 		Scanner input = new Scanner(System.in);
 		input.nextLine();

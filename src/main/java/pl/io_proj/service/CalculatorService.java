@@ -1,5 +1,6 @@
 package pl.io_proj.service;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class CalculatorService {
         }
         DBUser currentUser = authenticatedUserFacade.getCurrentUser(); // zalogowany user
         double currentWeight = currentUser.getWeight();
-        double currentHeight = currentUser.getWeight();
+        double currentHeight = currentUser.getHeight();
 
         long days  = ChronoUnit.DAYS.between(LocalDate.now(), deadline);
         double bmr = calculateBMR(currentWeight, currentHeight);     // bmr - basic metabolic rate

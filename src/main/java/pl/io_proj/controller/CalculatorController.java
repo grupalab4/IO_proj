@@ -1,7 +1,9 @@
 package pl.io_proj.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,8 @@ public class CalculatorController {
     private final CalculatorService calculatorService;
 
     @GetMapping
-    public ResponseEntity<Integer> getDailyCalorieIntake(@RequestParam double goalWeight, @RequestParam LocalDate deadline) {
+    public ResponseEntity<Integer> getDailyCalorieIntake(@RequestParam double goalWeight,
+                                                         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate deadline) {
         Integer dailyCalorieIntake = this.calculatorService.getDailyCalorieIntake(goalWeight, deadline);
         return new ResponseEntity<>(dailyCalorieIntake, HttpStatus.OK);
     }
