@@ -61,7 +61,7 @@ public class SecurityConfig {
                 .cors().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/css/*", "/images/*", "/js/*", "/register.html", "/api/users/register").permitAll()
-                .requestMatchers("/api/*", "/*", "/api/products/*").authenticated()
+                .requestMatchers("/api/users/*", "/*", "/api/products/*").authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login.html")

@@ -1,8 +1,8 @@
 package pl.io_proj.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -56,5 +56,15 @@ public class DBUserService {
 
         addDBUser(new DBUser(username, password, firstName, surname, weight, height, age));
         return RegisterResponse.Ok.json();
+    }
+
+    public DBUser getCurrentDBUser() throws Exception{
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if(!authentication.isAuthenticated()){
+            throw new Exception("User is not logged!");
+        }
+
+        return repository.getDBUserByUsername(authentication.getName());
     }
 }
