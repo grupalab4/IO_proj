@@ -9,6 +9,10 @@ import pl.io_proj.model.Product;
 import pl.io_proj.repository.ProductRepository;
 import pl.io_proj.responses.RegisterResponse;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Objects;
+
 @Service
 public class ProductService {
     private ProductRepository repository;
@@ -50,6 +54,17 @@ public class ProductService {
 
         return repository.findByName(name)
                 .orElseThrow(() -> new Exception("Product not found"));
+    }
+
+    public ArrayList<String> findAllProductsByName(String input) {
+        ArrayList<String> result = new ArrayList<>();
+
+        for(Product p : repository.findAll()) {
+            if(Objects.requireNonNull(p.getName().contains(input))) result.add(p.getName());
+            if(result.size()>=20) return result;
+        }
+
+        return result;
     }
 }
 

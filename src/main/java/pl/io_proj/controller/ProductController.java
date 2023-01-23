@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import pl.io_proj.model.Product;
 import pl.io_proj.service.ProductService;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping(path = "api/products")
 public class ProductController {
@@ -34,7 +36,16 @@ public class ProductController {
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
+    }
 
+    @GetMapping("/find-products")
+    public ResponseEntity<?> findAllProductsByName(@RequestParam String input) {
+        try {
+            ArrayList<String> products = service.findAllProductsByName(input);
 
+            return new ResponseEntity<>(products, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 }
