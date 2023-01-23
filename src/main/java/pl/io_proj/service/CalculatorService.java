@@ -1,19 +1,14 @@
 package pl.io_proj.service;
 
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.io_proj.model.DBUser;
-import pl.io_proj.repository.DBUserRepository;
-
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 @RequiredArgsConstructor
 @Service
 public class CalculatorService {
-    //private final AuthenticatedUserFacade authenticatedUserFacade;
     private final DBUserService dbUserService;
     private final double AVERAGE_PAL = 1.35; // indywidualny wskaźnik aktywności fizycznej
     private final int CALORIES_PER_KG = 7700;
