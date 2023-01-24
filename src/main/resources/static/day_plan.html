@@ -29,37 +29,21 @@
     </div>
     <main>
         <section class="day-plan">
-            <div class="add-item-calories-container">
-                <div class="add-item">
-                    <p>Wyszukaj produkt</p>
-                    <div class="text_input">
-                        <input type="text" placeholder="Add meal">
-                    </div>
-                    <button class="button small-button">Dodaj</button>
+            <div class="add-item">
+                <p>Wyszukaj produkt</p>
+                <div class="text_input">
+                    <input type="text" placeholder="Nazwa produktu" oninput="searchPromptUpdate(this)">
                 </div>
-                <div class="calories">
-                    <p>Kalorie: 2137 kcal</p>
-                </div>
+                <button class="button small-button" onclick="addToItemList()">Dodaj</button>
             </div>
-            <div class="item-list">
-                <ul>
-                    <li>
-                        jablko
-                    </li>
-                    <li>
-                        pizza
-                    </li>
-                    <li>
-                        gruszka
-                    </li>
-                    <li>
-                        kotlet schabowy
-                    </li>
-                </ul>
+            <div id="search_results">
+
             </div>
-            <div class="button-save-container">
-                <button class="button small-button">Zapisz</button>
+            <div id="item-list">
+
             </div>
         </section>
     </main>
+    <script src="/js/tools.js"></script>
+    <script src="/js/searchForProducts.js"></script>
 </body>

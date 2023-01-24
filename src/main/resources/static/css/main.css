@@ -184,14 +184,15 @@ header>.spacing {
 .text_input_small {
     padding: 5px 15px;
 }
-.text_input_small > input {
+
+.text_input_small>input {
     font-size: normal;
 }
 
 .text_input>p {
     text-align: left;
     float: right;
-    margin:auto;
+    margin: auto;
 }
 
 .border-none {
@@ -226,4 +227,29 @@ header>.spacing {
 a {
     text-decoration: inherit;
     color: inherit;
+}
+
+#search_results {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+}
+
+.search-result-element {
+    color: white;
+    padding: 10px;
+    display: flex;
+    background-color: #265C32;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#search_results>.search-result-element:first-child {
+    border: 3px solid gray;
+    color: black;
+    background-color: #7ba985;
 }
