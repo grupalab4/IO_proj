@@ -39,6 +39,6 @@ public class CalculatorService {
 
     private double calculateBMR(double weight, double height, int age) {
         double bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-        return bmr;
+        return bmr;1qqq
     }
 }
