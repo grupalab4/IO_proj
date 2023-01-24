@@ -36,7 +36,7 @@ public class CalculatorService {
                                                                      // obliczamy deficyt zgodnie z inputem usera
         double weightDeficit = currentWeight - goalWeight;
         double calorieDeficit = weightDeficit * CALORIES_PER_KG;
-        double calorieIntake = (tdee - (calorieDeficit / days)) * 1.23;
+        double calorieIntake = (tdee - (calorieDeficit / days));
 
         Map<String, Integer> responseValuesMap = new HashMap<>();
         responseValuesMap.put("tdee", (int)Math.round(tdee));
@@ -45,7 +45,7 @@ public class CalculatorService {
         return responseValuesMap;
     }
     private double calculateBMR(double weight, double height, int age) {
-        double bmr = 88.362 + (12.397 * weight) + (4.799 * height) - (5.677 * age);
+        double bmr = 66.5 + (12.75 * weight) + (5.003 * height) - (6.775 * age);
         return bmr;
     }
 }
