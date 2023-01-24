@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.io_proj.service.CalculatorService;
 
 import java.time.LocalDate;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,9 +20,9 @@ public class CalculatorController {
     private final CalculatorService calculatorService;
 
     @GetMapping
-    public ResponseEntity<Integer> getDailyCalorieIntake(@RequestParam double goalWeight,
+    public ResponseEntity<Map<String, Integer>> getDailyCalorieIntake(@RequestParam double goalWeight,
                                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate deadline) throws Exception {
-        Integer dailyCalorieIntake = this.calculatorService.getDailyCalorieIntake(goalWeight, deadline);
+        Map<String, Integer> dailyCalorieIntake = this.calculatorService.getDailyCalorieIntake(goalWeight, deadline);
         return new ResponseEntity<>(dailyCalorieIntake, HttpStatus.OK);
     }
 }
