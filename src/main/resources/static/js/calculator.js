@@ -4,7 +4,21 @@ async function calculate() {
     weight = "goalWeight=" + weight;
     date = "deadline=" + date;
     
-    let kcal = await getFormData("/api/calculator", "?" + weight + "&" + date);
+    let response = await getFormData("/api/calculator", "?" + weight + "&" + date);
     
-    document.getElementById("result").innerText = kcal;
+    let bmr = response.bmr;
+    let tdee = response.tdee;
+    let calorie = response.calorieIntake;
+    
+    document.getElementById("intake").innerText = calorie < bmr ? bmr : calorie;
+    document.getElementById("bmr").innerText = bmr;
+    document.getElementById("tdee").innerText = tdee;
+    
+    if (calorie < bmr) {
+        document.getElementById("message").innerText = "Cel niemożliwy do osiągnięcia, dzienny cel kaloryczny byłby mniejszy niż podstawowa przemiana materii!";
+        document.getElementById("message").style.color = "red";
+    } else {
+        document.getElementById("message").innerText = "Cel możliwy do osiągnięcia. Powodzenia!";
+        document.getElementById("message").style.color = "green";
+    }
 }
