@@ -49,6 +49,10 @@ header>.frame {
     transition: 0.3s;
 }
 
+header>.frame>p {
+    display: contents;
+}
+
 header>a:hover {
     background-color: #bfdac5;
 }
