@@ -4,10 +4,10 @@
     grid-template-columns: 2fr 1fr;
     justify-content: space-around;
     background: #265C32;
-    max-height: 500px;
     margin-bottom: 4em;
     padding: 30px;
     gap: 20px;
+    max-height: 600px;
 }
 
 .input-form {
@@ -18,8 +18,9 @@
 }
 
 .inputs{
-    display: flex;
+    display: grid;
     justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     width: 60%;
 }
@@ -30,7 +31,6 @@ input {
 }
 
 .input-box {
-    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;

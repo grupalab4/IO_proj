@@ -38,16 +38,27 @@
     <main>
         <section class="add-product">
             <div class="input-form">
-                <div class="input-box">
+                <form id="product-form" class="input-box" action="javascript: void(0);">
                     <div class="inputs">
-                        <input class="text_input" type="text" placeholder="product">
-                        <input class="text_input" type="number" placeholder="68" size="4">
-                        g
-                        <input class="text_input" type="number" placeholder="68" size="3">
-                        kcal
+                        <p>Nazwa produktu</p>
+                        <input name="name" class="text_input" type="text" placeholder="pomidor">
+                        <p>opis produktu</p>
+                        <input name="description" class="text_input" type="text" placeholder="jest czerwony">
+                        <p>składniki</p>
+                        <input name="composition" class="text_input" type="text" placeholder="pomidor, woda, miąsz, nasionka">
+                        <p>waga</p>
+                        <div>
+                            <input name="weight" style="display:inline" class="text_input" type="number" placeholder="100" size="4">
+                            <span>g</span>
+                        </div>
+                        <p> wartość kaloryczna </p>
+                        <div>
+                            <input name="kcal" style="display:inline" class="text_input" type="number" placeholder="19" size="3">
+                            <span> kcal </span>
+                        </div>
                     </div>
-                    <button class="button wide-button">Dodaj</button>
-                </div>
+                    <input type="submit" class="button wide-button" value="Dodaj">
+                </form>
                 <div class="input-box">
                     <h3>Szukaj produktu</h3>
                     <div class="text_input">
@@ -62,4 +73,5 @@
     <script src="/js/tools.js"></script>
     <script src="/js/infoInHeader.js"></script>
     <script src="/js/searchForProducts.js"></script>
+    <script src="/js/addProduct.js"></script>
 </body>
