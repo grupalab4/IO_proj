@@ -157,7 +157,7 @@ header>.spacing {
 }
 
 .text_input {
-    padding: 15px 25px;
+    padding: 10px 15px;
     border: 2px solid #265C32;
     border-radius: 4px;
     display: flex;
@@ -166,7 +166,7 @@ header>.spacing {
 }
 
 .text_input[type=number] {
-    padding: 15px 15px 15px 20px;
+    padding: 10px 15px 10px 20px;
     border: 2px solid #265C32;
     border-radius: 4px;
     display: flex;
@@ -231,6 +231,16 @@ header>.spacing {
 a {
     text-decoration: inherit;
     color: inherit;
+}
+
+#item-list {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
 }
 
 #search_results {
