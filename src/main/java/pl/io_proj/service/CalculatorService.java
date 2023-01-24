@@ -1,5 +1,6 @@
 package pl.io_proj.service;
 
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.io_proj.model.DBUser;
@@ -23,9 +24,10 @@ public class CalculatorService {
         DBUser currentUser = dbUserService.getCurrentDBUser(); // zalogowany user
         double currentWeight = currentUser.getWeight();
         double currentHeight = currentUser.getHeight();
+        int currentAge = currentUser.getAge();
 
         long days  = ChronoUnit.DAYS.between(LocalDate.now(), deadline);
-        double bmr = calculateBMR(currentWeight, currentHeight);     // bmr - basic metabolic rate
+        double bmr = calculateBMR(currentWeight, currentHeight, currentAge);     // bmr - basic metabolic rate
         double tdee = bmr * AVERAGE_PAL;                             // tdee - całkowite dzienne zapotrzebowanie kaloryczne
                                                                      // obliczamy deficyt zgodnie z inputem usera
         double weightDeficit = currentWeight - goalWeight;
@@ -35,8 +37,8 @@ public class CalculatorService {
         return calorieIntake < bmr ? (int)Math.round(bmr) : (int)Math.round(calorieIntake); // zwracana wartość nie powinna być mniejsza od bmr
     }
 
-    private double calculateBMR(double weight, double height) {
-        double bmr = (10 * weight) + (6.25 * height) - (5 * 30) + 5;
+    private double calculateBMR(double weight, double height, int age) {
+        double bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
         return bmr;
     }
 }
