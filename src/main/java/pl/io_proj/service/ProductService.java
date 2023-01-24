@@ -59,7 +59,7 @@ public class ProductService {
         ArrayList<String> result = new ArrayList<>();
 
         for(Product p : repository.findAll()) {
-            if(Objects.requireNonNull(p.getName().contains(input))) result.add(p.getName());
+            if(Objects.requireNonNull(p.getName().toLowerCase().contains(input.toLowerCase()))) result.add(p.getName());
             if(result.size()>=20) return result;
         }
 
