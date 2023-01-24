@@ -22,7 +22,8 @@ public class ProductController {
     }
 
     @GetMapping("/add_product")
-    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) throws JsonProcessingException {
+    public String addProduct(String name, String description, String composition, Integer weight, Integer kcal) throws JsonProcessingException {
+        var calorificValuePer100G = kcal * 100/weight;
         return service.addProduct(name, description, composition, calorificValuePer100G);
     }
 
