@@ -41,28 +41,26 @@
                 <div class="future">
                     <div class="input-info">
                         <p> Planowana waga: </p>
-                        <input class="text_input text_input_small border-none" name="weight" type="number"
+                        <input id="weight" class="text_input text_input_small border-none" name="weight" type="number"
                             placeholder="70" size="3">
                         <p>kg</p>
                     </div>
-                    <button type="button" class="button wide-button">Zapisz</button>
-                </div>
-                <div class="future">
                     <div class="input-info">
                         Planowany termin
-                        <input name="date" type="date">
+                        <input id="date" name="date" type="date">
                     </div>
-                    <button type="button" class="button wide-button">Zapisz</button>
+                    <button type="button" class="button wide-button" onclick="calculate()">Zapisz</button>
                 </div>
             </div>
             <div class="right">
                 <div class="balance">
                     <p>Aby osiagnąć swój cel musisz spożywać:</p>
-                    <p>2137 kcal</p>
+                    <p id="result">2137 kcal</p>
                 </div>
             </div>
         </section>
     </main>
     <script src="/js/tools.js"></script>
     <script src="/js/infoInHeader.js"></script>
+    <script src="/js/calculator.js"></script>
 </body>
