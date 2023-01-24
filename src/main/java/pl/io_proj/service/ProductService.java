@@ -1,13 +1,16 @@
 package pl.io_proj.service;
 
-import jakarta.servlet.http.HttpServletRequest;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import pl.io_proj.model.Product;
 import pl.io_proj.repository.ProductRepository;
-import pl.io_proj.responses.RegisterResponse;
+import pl.io_proj.responses.ProductResponse;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Objects;
 
 @Service
 public class ProductService {
@@ -18,7 +21,7 @@ public class ProductService {
         this.repository = repository;
     }
 
-    private Product addProduct(Product product) {
+    public Product smallAddProduct(Product product) {
         Product newProduct = new Product(
                 product.getName(),
                 product.getDescription(),
@@ -32,15 +35,15 @@ public class ProductService {
         return repository.existsProductByName(name);
     }
 
-    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) {
+    public String addProduct(String name, String description, String composition, Integer calorificValuePer100G) throws JsonProcessingException {
         if (name == null || calorificValuePer100G == null)
-            return "Nie podano name lub calorificValuePer100G";
+            return ProductResponse.NotEnoughParameters.json();
 
         if (existsProductByName(name))
-            return "Istnieje produkt o takiej samej nazwie";
+            return ProductResponse.ProductAlreadyExists.json();
 
-        addProduct(new Product(name, description, composition, calorificValuePer100G));
-        return "Produkt "+name+" dodano";
+        smallAddProduct(new Product(name, description, composition, calorificValuePer100G));
+        return ProductResponse.Ok.json();
     }
 
     public Product getProductByName(String name) throws Exception {
@@ -50,6 +53,17 @@ public class ProductService {
 
         return repository.findByName(name)
                 .orElseThrow(() -> new Exception("Product not found"));
+    }
+
+    public ArrayList<String> findAllProductsByName(String input) {
+        ArrayList<String> result = new ArrayList<>();
+
+        for(Product p : repository.findAll()) {
+            if(Objects.requireNonNull(p.getName().contains(input))) result.add(p.getName());
+            if(result.size()>=20) return result;
+        }
+
+        return result;
     }
 }
 

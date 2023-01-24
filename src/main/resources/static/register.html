@@ -17,7 +17,7 @@
         </div>
         <div class="side_panel">
             <p>Rejestracja</p>
-            <form action="/api/users/register" class="register_panel" id="register_form">
+            <form method="post" action="javascript:void(0);" class="register_panel" id="register_form">
                 <div class="text_input_wrapper">
                     <p>Login </p>
                     <div class="text_input">
@@ -49,21 +49,21 @@
                 <div class="text_input_wrapper">
                     <p>Wiek</p>
                     <div class="text_input">
-                        <input type="Number" name="age" placeholder="22" />
+                        <input type="Number" name="age" placeholder="22" min="0" max="150"/>
                     </div>
                 </div>
 
                 <div class="text_input_wrapper">
                     <p>Wzrost</p>
                     <div class="text_input">
-                        <input type="Number" name="height" placeholder="179" />
+                        <input type="Number" name="height" placeholder="179" min="0" max="250"/>
                     </div>
                 </div>
 
                 <div class="text_input_wrapper">
-                    <p>Waga</p>
+                    <p>Waga w kg</p>
                     <div class="text_input">
-                        <input type="Number" name="weight" placeholder="69" />
+                        <input type="Number" name="weight" placeholder="69" min="0" max="500" />
                     </div>
                 </div>
                 <input class="button" type="submit" value="Zarejestruj się" />
@@ -72,6 +72,7 @@
     </div>
 
     <script src="../js/tools.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>
